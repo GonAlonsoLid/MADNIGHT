@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MadNIGHT</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="image">
+      <img src="noche1.jpg">
+      <div class="image-title">
+        <h1>MadNIGHT</h1>
+      </div>
+    </div>
+  </header>
+  <nav class="main_menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="discotecas.html">Discotecas</a></li>
+      <li><a href="aboutus.html">¿Quienes somos?</a></li>
+      <li><a href="contactus.html">¡Ponte en contacto!</a></li>
+      <li><a href="planning.html">¡Planea tu viaje!</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div class="cuerpo_ppal">
+      <div class="texto_plan">
+        <h2>Planea tu viaje</h2>
+        <p>En la siguiente pestaña puedes hacer uso de la herramienta proporcionada por nuestro socio SkyScanner© para
+          calcular el coste de tus vuelos a Madrid, de manera que
+          puedas aprovechar tu noche al maximo por el menor precio posible.
+        </p>
+        <p>Vamos a partir de una base de que, al ser todos jóvenes nuestra clase por defecto va a ser ECONOMY, asi que
+          tampoco os flipeis...
+        </p>
+        <p>
+          Rellena el siguiente formulario para obtener una lista de los mejores precios de los vuelos a
+          Madrid para la fecha que desees. Ten en cuenta que a la hora de rellenar campos como el origen
+          has de incluir <a id="IATA"
+            target="_blank" href="https://es.wikipedia.org/wiki/Anexo:Aeropuertos_seg%C3%BAn_el_c%C3%B3digo_IATA">el codigo del
+            Aeropuerto</a>.
+        </p>
+      </div>
+      <br>
+      <div>
+        <form id="formulario">
+          <fieldset>
+            <p>
+              <label for="origen">Aeropuero de Origen:</label><br>
+              <input type="text" id="origen" name="fname" required><br>
+            </p>
+            <p>
+              <label for="num_pasajeros">Número de Pasajeros:</label><br>
+              <input id="num_pasajeros" type="number" required>
+            </p>
+
+            <p>
+              <label for="fecha">Fecha del viaje:</label><br>
+              <input id="fecha" type="date" required>
+            </p>
+            <br>
+            <button type="submit" id="enviar" onclick=validarYActualizar(event)>Dame los resultados!!</button>
+          </fieldset>
+        </form>
+      </div>
+      <br>
+      <br>
+      <section id="resultados" style="display: none;">
+        <h2>Resultados de la búsqueda</h2>
+        <div id="titulo_origen"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Agencia</th>
+              <th>Precio</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-resultados"></tbody>
+        </table>
+      </section>
+      
+    </div>
+  </main>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <div class="content">
+      <p>MadNIGHT S.L. © 2023. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
